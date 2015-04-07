@@ -1,4 +1,4 @@
-import java.awt.List;
+import java.util.List;
 
 
 public class Encoder {
@@ -15,6 +15,7 @@ public class Encoder {
 	
 	public List<String> read()
 	{
+		return null;
 		
 	}
 	
