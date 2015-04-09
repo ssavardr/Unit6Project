@@ -31,18 +31,7 @@ public class FrontEnd {
 		window.setLocationRelativeTo(null);
 		window.getContentPane().setLayout(null);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(332, 50, 34, 32);
-		window.getContentPane().add(comboBox);
 		
-		JLabel lblSelectUser = new JLabel("Select User");
-		lblSelectUser.setBounds(48, 59, 89, 40);
-		window.getContentPane().add(lblSelectUser);
-		
-		textField = new JTextField();
-		textField.setBounds(156, 69, 86, 20);
-		window.getContentPane().add(textField);
-		textField.setColumns(10);
 		
 	}
 	public static void main(String[] args){

@@ -4,6 +4,9 @@ import java.util.List;
 
 public class BackEnd {
 
+	
+	private ArrayList<User> userList = new  ArrayList<User>();
+	
 	public BackEnd()
 	{
 		
@@ -11,7 +14,12 @@ public class BackEnd {
 	
 	public List<String> getMessages(String username)
 	{
-		List<String> list = new ArrayList<String>();
+		ArrayList<String> list = null;
+		for(int i = 0; i < userList.size(); i++)
+		{
+			if(username == userList.get(i).getName())
+				list = userList.get(i).getUserMessages();
+		}
 		return list;
 	}
 	
@@ -22,6 +30,12 @@ public class BackEnd {
 	
 	public List<String> getUsers()
 	{
+		ArrayList<String> list = null;
+		for(int i = 0; i < userList.size(); i++)
+		{
+			if(userList.get(i).getUserMessages() != null)
+				list.add(userList.get(i).getName());
+		}
 		return null;
 		
 	}
