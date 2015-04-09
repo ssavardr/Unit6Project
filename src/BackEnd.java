@@ -25,7 +25,11 @@ public class BackEnd {
 	
 	public void addMessage(String username, String msg)
 	{
-		
+		for(int i = 0; i < userList.size(); i++)
+		{
+			if(username == userList.get(i).getName())
+				userList.get(i).addUserMessage(msg);
+		}
 	}
 	
 	public List<String> getUsers()
@@ -36,7 +40,7 @@ public class BackEnd {
 			if(userList.get(i).getUserMessages() != null)
 				list.add(userList.get(i).getName());
 		}
-		return null;
+		return list;
 		
 	}
 	
