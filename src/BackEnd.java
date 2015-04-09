@@ -9,7 +9,8 @@ public class BackEnd {
 	
 	public BackEnd()
 	{
-		
+		userList.add(new User("Sean"));
+		userList.add(new User("Rafie"));
 	}
 	
 	public List<String> getMessages(String username)
@@ -21,7 +22,7 @@ public class BackEnd {
 				list = userList.get(i).getUserMessages();
 		}
 		return list;
-	}
+	} 
 	
 	public void addMessage(String username, String msg)
 	{
