@@ -43,7 +43,7 @@ public class FrontEnd {
 		
 		JTextPane messagePane = new JTextPane();
 		messagePane.setBackground(Color.LIGHT_GRAY);
-		messagePane.setBounds(227, 124, 417, 249);
+		messagePane.setBounds(246, 25, 524, 725);
 		window.getContentPane().add(messagePane);
 		
 		JButton searchMessagesButton = new JButton("Search Messages");
@@ -51,8 +51,29 @@ public class FrontEnd {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		searchMessagesButton.setBounds(43, 159, 121, 32);
+		searchMessagesButton.setBounds(25, 495, 200, 75);
 		window.getContentPane().add(searchMessagesButton);
+		
+		JList usernameList = new JList();
+		usernameList.setBackground(Color.LIGHT_GRAY);
+		usernameList.setBounds(25, 25, 200, 450);
+		window.getContentPane().add(usernameList);
+		
+		JButton addUserButton = new JButton("Add User");
+		addUserButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		addUserButton.setBounds(25, 589, 200, 75);
+		window.getContentPane().add(addUserButton);
+		
+		JButton composeMessageButton = new JButton("Compose Message");
+		composeMessageButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		composeMessageButton.setBounds(25, 675, 200, 75);
+		window.getContentPane().add(composeMessageButton);
 		
 		ArrayList<String> users = (ArrayList<String>) backEnd.getUsers();
 		String [] usernameArray = new String [users.size()];
@@ -60,15 +81,6 @@ public class FrontEnd {
 		{
 			usernameArray[i] = users.get(i);
 		}
-		JComboBox usernameSelector = new JComboBox(usernameArray);
-		usernameSelector.setBounds(170, 41, 28, 20);
-		window.getContentPane().add(usernameSelector);
-		
-		
-		
-		JLabel selectUsernameLabel = new JLabel("Select Username");
-		selectUsernameLabel.setBounds(28, 39, 92, 25);
-		window.getContentPane().add(selectUsernameLabel);
 		
 		
 		
