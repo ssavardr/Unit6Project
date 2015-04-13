@@ -5,7 +5,7 @@ import java.util.List;
 public class BackEnd {
 
 	
-	private ArrayList<User> userList = new  ArrayList<User>();
+	public ArrayList<User> userList = new  ArrayList<User>();
 	
 	public BackEnd()
 	{
@@ -35,11 +35,10 @@ public class BackEnd {
 	
 	public List<String> getUsers()
 	{
-		ArrayList<String> list = null;
+		ArrayList<String> list = new ArrayList<String>();
 		for(int i = 0; i < userList.size(); i++)
 		{
-			if(userList.get(i).getUserMessages() != null)
-				list.add(userList.get(i).getName());
+			list.add(userList.get(i).getName());
 		}
 		return list;
 		
